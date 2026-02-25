@@ -6,3 +6,4 @@ numpy
 numpy-stl
 timm
 Pillow
+streamlit-stl
