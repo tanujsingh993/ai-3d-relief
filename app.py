@@ -23,7 +23,7 @@ contrast = st.sidebar.slider("Depth Intensity", 0.1, 5.0, 1.5)
 blur = st.sidebar.slider("Smoothing", 1, 15, 5, step=2)
 base_thickness = st.sidebar.slider("Base Plate (mm)", 0.0, 10.0, 2.0)
 
-uploaded_file = st.file_file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     # Read Image
@@ -80,4 +80,5 @@ if uploaded_file is not None:
                 stl_io = f.read()
 
             st.success("3D Relief Ready!")
+
             st.download_button(label="📥 Download STL File", data=stl_io, file_name="ai_relief.stl", mime="application/sla")
